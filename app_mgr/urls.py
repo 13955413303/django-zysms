@@ -15,12 +15,13 @@ Including another URLconf
 """
 
 from django.urls import path
-from .views import customers,sign
+from .views import customers,sign,medicines
 
 
 urlpatterns = [
     path('customers', customers.dispatcher),
     path('signin',sign.signin),
-    path('signout',sign.signout)
+    path('signout',sign.signout),
+    path('medicines',medicines.dispatcher)
 
 ]
